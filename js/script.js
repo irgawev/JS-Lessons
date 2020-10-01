@@ -279,4 +279,36 @@
 
 
 
-alert('Hello World');
+let users = [
+    { name: 'Emma', age: 15 },
+    { name: 'Rasulbek', age: 16 },
+    { name: 'Djon', age: 18 },
+    { name: 'Stan', age: 19 }
+]
+
+
+// call
+// for (let i = 0; i < users.length; i++) {
+//     console.log(users[i]);
+// };
+
+
+// forEach()
+// users.forEach((person, index) => console.log(`${index}: ${person}`))
+
+
+// map()
+// const newPeople = users.map(index => index.name);
+
+
+// filter
+// const adults = users.filter(person => person.age >= 18);
+
+
+// reduce
+// let amount = users.reduce((total, person) => total += person.age, 0);
+
+
+// find
+// const emma = users.find(person => person.name === 'Emma');
+
