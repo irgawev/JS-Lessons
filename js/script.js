@@ -256,7 +256,7 @@
 // 	return sym;
 // }
 
-// sumInput();
+// console.log(sumInput());
 
 
 
@@ -279,12 +279,12 @@
 
 
 
-let users = [
-    { name: 'Emma', age: 15 },
-    { name: 'Rasulbek', age: 16 },
-    { name: 'Djon', age: 18 },
-    { name: 'Stan', age: 19 }
-]
+// let users = [
+//     { name: 'Emma', age: 15 },
+//     { name: 'Rasulbek', age: 16 },
+//     { name: 'Djon', age: 18 },
+//     { name: 'Stan', age: 19 }
+// ]
 
 
 // call
@@ -312,3 +312,63 @@ let users = [
 // find
 // const emma = users.find(person => person.name === 'Emma');
 
+// split & join
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+// let writeUser = prompt('PLease write a names of new users', '');
+// let users = [];
+// const splitUsers = writeUser.split(', ')
+
+// function addUser(newUser) {
+//     let result = users.push(newUser);
+
+// }
+
+// addUser(splitUsers);
+
+// console.log(users);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let range = {
+    from: 1,
+    to: 7
+};
+
+range[Symbol.iterator] = function() {
+    return {
+        current: this.from,
+        last: this.to,
+
+        next() {
+            if (this.current <= this.last) {
+                return {done: false, value: this.current++}
+            } else {
+                return {done: true}
+            }
+        }
+    }
+}
+
+for (let i of range) {
+    console.log(i)
+}
