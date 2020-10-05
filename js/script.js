@@ -349,26 +349,123 @@
 
 
 
-let range = {
-    from: 1,
-    to: 7
-};
 
-range[Symbol.iterator] = function() {
-    return {
-        current: this.from,
-        last: this.to,
+// let range = {
+//     from: 1,
+//     to: 10,
 
-        next() {
-            if (this.current <= this.last) {
-                return {done: false, value: this.current++}
-            } else {
-                return {done: true}
-            }
-        }
-    }
-}
+//     [Symbol.iterator]() {
+//         this.current = this.from;
+//         return this;
+//     },
 
-for (let i of range) {
-    console.log(i)
-}
+//     next() {
+//         if (this.current <= this.to) {
+//             return {
+//                 done: false,
+//                 value: this.current++
+//             }
+//         } else {
+//             return { done: true }
+//         }
+//     }
+// }
+
+// for (let i of range) {
+//     console.log(i)
+// }
+
+// let range = {
+//     from: 1,
+//     to: 10
+// }
+
+// range[Symbol.iterator] = function() {
+//     return {
+//         current: this.from,
+//         last: this.to,
+
+//         next() {
+//             if (this.current <= this.last) {
+//                 return {
+//                     done: false,
+//                     value: this.current++
+//                 }
+//             } else {
+//                 return { done: true }
+//             }
+//         }
+//     }
+// }
+
+// for (let i of range) {
+//     console.log(i)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let uniqueWord = prompt('Write any text', '');
+// let uniqueWord = []
+
+// function unique(arr) {
+//     let uniqueWordAdd = prompt('Write a unique words please...', '');
+//     let singleUniqueWords = uniqueWordAdd.split(' ');
+
+//     uniqueWord.push(singleUniqueWords);
+//     return (
+//         uniqueWordSet = Array.from(new Set(uniqueWord))
+//     )
+// }
+
+// console.log(unique());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = Array.from(map.key());
+
+// Error: keys.push is not a function
+// Ошибка: keys.push -- это не функция
+// keys.push("more");
