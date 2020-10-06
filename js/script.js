@@ -469,3 +469,226 @@
 // Error: keys.push is not a function
 // Ошибка: keys.push -- это не функция
 // keys.push("more");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let visits = new Map();
+// visits.set('value', 0)
+
+// function countUser(user) {
+//     let count = visits.get(user) || 0;
+
+//     for (let i of visits) {
+//         visits.set(user, count++);
+//     }
+
+// }
+
+// countUser('Rasulbek');
+// countUser('Rasul');
+// countUser('Rasul1');
+// countUser('Rasul2');
+
+// console.log(visits);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let visitedUsers = new WeakSet();
+
+// let john = {name: 'John'};
+// let emma = {name: 'Emma'};
+// let mary = {name: 'Mary'};
+
+// visitedUsers.add(john);
+// visitedUsers.add(emma);
+// console.log(visitedUsers.has(john));
+// visitedUsers.delete(john);
+
+
+
+// let messages = [
+//     {
+//         txt: 'Hello',
+//         from: 'John'
+//     },
+//     {
+//         txt: 'How goes?',
+//         from: 'John'
+//     },
+//     {
+//         txt: 'See you soon',
+//         from: 'Alice'
+//     }
+// ];
+
+// let readMessages = new WeakSet();
+
+// readMessages.add(messages[0]);
+// readMessages.add(messages[1]);
+
+// for (let i = 0; i < messages.length; i++) {
+//     if (!readMessages.has(messages[i])) {
+//         let result = messages.length - i;
+//         console.log(`${result} message(s) unreaded. From: ${messages[i].from}`);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let prices = {
+//     banana: 1,
+//     orange: 2,
+//     meat: 4
+// }
+
+// let doublePrice = Object.fromEntries(
+//     Object.entries(prices).map(([key, value]) => [key, value * 2])
+// );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let salaries = {
+//     'john': 105,
+//     'emma': 200,
+//     'pett': 250,
+// };
+
+// function sumSalaries(arg) {
+//     let sum = 0;
+
+//     for (let i of Object.values(arg)) {
+//         let parseI = parseInt(i);
+//         sum += parseI;
+//     }
+    
+//     return sum;
+// }
+
+// console.log(sumSalaries(salaries));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
