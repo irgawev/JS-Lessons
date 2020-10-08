@@ -687,8 +687,327 @@
 
 
 
+// let user = new Map();
+
+// user.set('name', 'Rasulbek')
+//     .set('age', 16);
+
+// for (let [keys, values] of user) {
+//     console.log(`${keys}: ${values}`);
+// }
+
+
+
+
+// let options = {
+//     one: 1,
+//     two: 2,
+//     three: 3
+// };
+
+// let {one, ...rest} = options
+
+// console.log(rest);
+
+
+
+
+// let options = {
+//     size: {
+//         width: 200,
+//         height: 100
+//     },
+//     item: [
+//         'Cake',
+//         'Doner'
+//     ],
+//     extra: true
+// };
+
+// let {
+//     size: {
+//         width,
+//         height
+//     },
+//     item: [
+//         item1,
+//         item2
+//     ],
+//     title = 'Menu'
+// } = options;
+
+// console.log(title);
 
 
 
 
 
+
+// let user = {
+//     name: "Rasulbek",
+//     years: 16
+// };
+
+// let {
+//     name,
+//     years,
+//     isAdmin = false
+// } = user;
+
+// console.log(years)
+
+
+
+
+
+
+// var salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+
+// function topSalary(arg) {
+//     var name = null;
+//     var num = 0;
+
+//     for (var [key, value] of Object.entries(arg)) {
+//         if (num <= value) {
+//             num = value;
+//             name = key;
+//         }
+//     }
+
+//     return name;
+// }
+
+// topSalary(salaries);\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let date = new Date(2020, 9, 8);
+
+// function getWeekDay(arg) {
+//     let dayOfWeek = arg.getDay();
+//     let dayWeek;
+
+//     if (dayOfWeek == 0) {
+//         dayWeek = 'Воскресенье'
+//     } else if (dayOfWeek == 1) {
+//         dayWeek = 'Понедельник'
+//     } else if (dayOfWeek == 2) {
+//         dayWeek = 'Вторник'
+//     } else if (dayOfWeek == 3) {
+//         dayWeek = 'Среда'
+//     } else if (dayOfWeek == 4) {
+//         dayWeek = 'Четверг'
+//     } else if (dayOfWeek == 5) {
+//         dayWeek = 'Пятница'
+//     } else if (dayOfWeek == 6) {
+//         dayWeek = 'Суббота'
+//     } 
+
+//     return dayWeek;
+// }
+
+// console.log(getWeekDay(date));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let date = new Date(2020, 9, 5);
+
+// function getLocalDay(arg) {
+//     let dayOfWeek = arg.getDay();
+//     let dayWeek;
+
+//     if (dayOfWeek == 0) {
+//         dayOfWeek = 7;
+//         dayWeek = 'Воскресенье';
+//     } else if (dayOfWeek == 1) {
+//         dayOfWeek = 1;
+//         dayWeek = 'Понедельник';
+//     } else if (dayOfWeek == 2) {
+//         dayOfWeek = 2
+//         dayWeek = 'Вторник';
+//     } else if (dayOfWeek == 3) {
+//         dayOfWeek = 3
+//         dayWeek = 'Среда';
+//     } else if (dayOfWeek == 4) {
+//         dayOfWeek = 4
+//         dayWeek = 'Четверг';
+//     } else if (dayOfWeek == 5) {
+//         dayOfWeek = 5
+//         dayWeek = 'Пятница';
+//     } else if (dayOfWeek == 6) {
+//         dayOfWeek = 6
+//         dayWeek = 'Суббота';
+//     } 
+
+//     return dayWeek;
+// }
+
+// console.log(getLocalDay(date));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let date = new Date();
+// let quest = +prompt('Write a any number', '');
+
+// function getDateAgo (dateTd, daysAgo) {
+//     let getPersonNum = dateTd.getDate() - daysAgo;
+
+//     return getPersonNum;
+// }
+
+// console.log(getDateAgo(date, quest));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getLastDayOfMonth(year, month) {
+//     let date = new Date(year, month + 1, 0);
+
+//     return date;
+// }
+
+// console.log(getLastDayOfMonth(2021, 9));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getSecondsToTomorrow() {
+//     let nowDate = new Date();
+//     let nowHour = nowDate.getHours();
+//     let nowMinute = nowDate.getMinutes();
+//     let sumMinute = nowMinute * 60;
+
+//     let a = (24 - nowHour) * 3600;
+
+//     let result = a + sumMinute;
+
+//     return Math.round(result);
+// }
+
+// console.log(getSecondsToTomorrow()) 
