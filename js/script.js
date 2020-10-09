@@ -817,6 +817,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let date = new Date(2020, 9, 8);
 
 // function getWeekDay(arg) {
@@ -843,20 +859,6 @@
 // }
 
 // console.log(getWeekDay(date));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -911,27 +913,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let date = new Date();
 // let quest = +prompt('Write a any number', '');
 
@@ -942,19 +923,6 @@
 // }
 
 // console.log(getDateAgo(date, quest));
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -987,16 +955,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // function getSecondsToTomorrow() {
 //     let nowDate = new Date();
 //     let nowHour = nowDate.getHours();
@@ -1011,3 +969,181 @@
 // }
 
 // console.log(getSecondsToTomorrow()) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek',
+//     age: 16,
+//     skills: [
+//         'HTML',
+//         'CSS',
+//         'Little bit JS'
+//     ],
+//     isAdmin: true,
+//     wife: false
+// }
+
+// let json = JSON.stringify(user);
+// let toObj = JSON.parse(json);
+
+// console.log(toObj)
+
+
+
+
+
+
+// let room = {
+//     number: 11
+// };
+
+// let meetup = {
+//     title: 'Conference',
+//     participants: [
+//         {
+//             name: 'Rasulbek'
+//         },
+//         {
+//             name: 'John'
+//         }
+//     ],
+//     place: room
+// };
+
+// room.occupiedBy = meetup;
+
+// console.log( JSON.parse(JSON.stringify(meetup, ['title', 'participants', 'place', 'name', 'number'], 4)) )
+
+
+
+
+
+
+
+
+// let room = {
+//     number: 23
+//   };
+  
+//   let meetup = {
+//     title: "Совещание",
+//     occupiedBy: [{name: "Rasulbek"}, {name: "Pett"}],
+//     place: room
+//   };
+  
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// console.log(
+//     JSON.stringify(meetup, function(key, value) {
+//         return (
+//             (key != '' && value == meetup) ? undefined : value
+//         )
+//     })
+// )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
