@@ -16,8 +16,16 @@ body
 
 h1
 {
+	position: relative;
 	text-align: center;
-	font: bold 80px arial;
-	color: orange;
-	margin-top: 25%;
+	font: 80px 'Concert One';
+	font-weight: bold;
+	top: 25vh;
+	color: #00011554;
+	-webkit-background-clip: text;
+	background-image: url(https://www.msta.org/wp-content/uploads/2017/10/watercolor-background-1.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

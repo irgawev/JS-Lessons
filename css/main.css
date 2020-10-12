@@ -1,4 +1,7 @@
-/* CSS IMPORTS ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
+/* Css Imports ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
 
-/* DEFAULT SETTING OF SITE */
-@import url("styles.css");
+/* Import fonts */
+@import url('fonts.css');
+
+/* Default styles of site */
+@import url('styles.css');

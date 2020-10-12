@@ -1147,3 +1147,333 @@
 
 
 
+// function pow(x, n) {
+//   return (n == 1) ? x : x * pow(x, n - 1);
+// }
+
+// console.log(pow(3, 3));
+
+
+
+
+
+
+// function sumTo(arg) {
+//   let nums = [];
+//   let result;
+
+//   for (let i = arg; i > 0; i--) {
+//     nums.push(i);
+//     result = nums.reduce((nums, current) => nums * current)
+//   }
+
+//   return result;
+// }
+
+// console.log(sumTo(5));
+
+
+
+
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+
+// function printList(list) {
+//   alert(list.value); // выводим текущий элемент
+// }
+
+// printList(list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sumAll(...args) {
+//   let result = 0;
+
+//   for (let value of args) result += value;
+
+//   return result;
+// }
+
+// console.log(sumAll(1,2,2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sum(a) {
+//     return function(b) {
+//         return a + b;
+//     }
+// }
+
+// console.log(sum(1)(9));
+
+
+
+
+
+
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// function inBetween(a, b) {
+//     for (let i = (a - 1); i < b); i++) {
+//         console.log(arr[i]);
+//     }
+// }
+
+// inBetween(1, 9);
+
+
+
+
+
+
+
+
+
+// let users = [
+//     { name: "John", age: 18, surname: "Johnson" },
+//     { name: "Pete", age: 18, surname: "Peterson" },
+//     { name: "Betty", age: 18, surname: "Johnson" },
+//     { name: "Ann", age: 18, surname: "Hathaway" }
+// ];
+
+// function byField(arg) {
+//     return (a, b) => a[arg] > b[arg] ? 1 : -1;
+// }
+
+// users.sort(byField('age'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let requestCommand = prompt('Please write a any command for JS', '');
+// let func = new Function(requestCommand);
+// func()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let timerId = setTimeout(function func() {
+//     alert('Hello');
+//     setTimeout(func, 1000);
+// }, 1000);
+
+
+
+
+
+
+// function printNumbers(from, to) {
+//     let current = from;
+
+//     let printResult = setInterval(function printNum() {
+//         console.log(current);
+//         if (current == to) clearInterval(printResult);
+//         current++;
+//     }, 1000);
+// }
+
+// printNumbers(1, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
