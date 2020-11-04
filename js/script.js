@@ -1442,6 +1442,14 @@
 
 
 
+// let i = 0;
+
+// setTimeout(() => alert(i), 100); // ?
+
+// // предположим, что время выполнения этой функции >100 мс
+// for(let j = 0; j < 100000000; j++) {
+//   i++;
+// }
 
 
 
@@ -1477,3 +1485,949 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function slow(key, ...value) {
+//     return key;
+// }
+
+// function toCache() {
+//     let cache = new Map();
+
+//     return (key, ...value) => {
+//         if (cache.has(key)) {
+//             return cache.get(key);
+//         }
+
+//         if (value == '' || value == undefined) {
+//             return 'Please write a value!';
+//         }
+
+//         return cache.set(key, value);
+//     }
+// }
+
+// slow = toCache(slow);
+
+
+
+
+
+
+
+
+// function sayHi() {
+//     console.log(this.name);
+// }
+
+// let user = {
+//     name: 'Rasulbek',
+//     age: 16
+// }
+
+
+
+
+
+
+
+
+// function slow(key, ...values) {
+//     return console.log(key);
+// }
+
+// function toCache() {
+//     let cache = new Map();
+
+//     return (key, ...values) => {
+//         if (cache.has(key)) return cache.get(key);
+//         if (values == undefined || values == '') return 'Write a value!';
+
+//         return cache.set(key, values);
+//     }
+// }
+
+// slow = toCache(slow);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek',
+    
+//     sayHi() {
+//         console.log(`Hello ${this.name}!`);
+//     }
+// }
+
+// let sayHi = user.sayHi.bind(user);
+
+// setTimeout(sayHi, 2000);
+
+
+
+
+
+// function mul(a, b) {
+//     return console.log(a * b);
+// }
+
+// let triple = mul.bind(null, 3);
+
+// triple(1e5);
+
+
+
+
+
+// let message = {};
+
+// message.from = prompt('What your the name?', '');
+// message.text = prompt('PLease write a text for send', '');
+
+// function writeMessage() {
+//     let from = this.from;
+//     let text = this.text;
+//     let date = new Date();
+
+//     return (`[${date.getHours()}:${date.getMinutes()}] ${from}: ${text}`);
+// }
+
+// let showMessage = writeMessage.bind(message);
+
+// console.log(showMessage());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let group = {
+//     title: 'Hello',
+//     students: ['Rasulbek', 'Emma', 'Pett'],
+
+//     showList() {
+//         this.students.forEach(student => console.log(`${this.title} ${student}`));
+//     }
+// }
+
+// group.showList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek'
+// };
+
+// let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+
+// console.log(JSON.stringify(descriptor, null, 1))
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek'
+// };
+
+// Object.defineProperty(user, 'name',{
+//     value: 'John',
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+// });
+
+// let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+
+// console.log(descriptor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek',
+//     surname: 'Irgashev',
+// };
+
+// Object.defineProperty(user, 'fullName', {
+//     get() {
+//         return `${this.name} ${this.surname}`;
+//     },
+//     set(value) {
+//         [this.name, this.surname] = value.split(' ');
+//     }
+// });
+
+// user.fullName = 'John Smith';
+
+// console.log(user.fullName);
+
+
+
+
+
+
+
+
+// let user = {};
+
+// Object.defineProperty(user, 'userName', {
+//     get() {
+//         return this._userName;
+//     },
+//     set(value) {
+//         if (value.length < 3) {
+//             return ('Username должен быть более 3 символов');
+//         }
+//         this._userName = value;
+//     },
+    
+//     configurable: false
+// });
+
+// console.log(user);
+
+
+
+
+
+
+
+
+// function User(name, birthday) {
+//     this.name = name;
+//     this.birthday = birthday;
+
+//     Object.defineProperty(this, 'age', {
+//         get() {
+//             let todayYear = new Date().getFullYear();
+//             return todayYear - birthday.getFullYear();
+//         }
+//     })
+// }
+
+// let rasul = new User('Rasulbek', new Date(2004, 04,30));
+
+// console.log(rasul.age);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user = {
+//     name: "John",
+//     surname: "Smith",
+  
+//     set fullName(value) {
+//       [this.name, this.surname] = value.split(" ");
+//     },
+  
+//     get fullName() {
+//       return `${this.name} ${this.surname}`;
+//     }
+//   };
+  
+//   let admin = {
+//     __proto__: user,
+//     isAdmin: true
+//   };
+  
+//   console.log(admin.fullName); // John Smith (*)
+  
+//   // срабатывает сеттер!
+//   admin.fullName = "Alice Cooper"; // (**)
+//   console.log(admin.name); // Alice
+//   console.log(admin.surname); // Cooper
+
+
+
+
+
+
+
+// // методы animal
+// let animal = {
+//     walk() {
+//       if (!this.isSleeping) {
+//         alert(`I walk`);
+//       }
+//     },
+//     sleep() {
+//       this.isSleeping = true;
+//     }
+//   };
+  
+//   let rabbit = {
+//     name: "White Rabbit",
+//     __proto__: animal
+//   };
+  
+//   // модифицирует rabbit.isSleeping
+//   rabbit.sleep();
+  
+//   alert(rabbit.isSleeping); // true
+//   alert(animal.isSleeping); // undefined (нет такого свойства в прототипе)
+
+
+
+
+
+
+
+// let animal = {
+//     eats: true
+//   };
+  
+//   let rabbit = {
+//     jumps: true,
+//     __proto__: animal
+//   };
+  
+//   // Object.keys возвращает только собственные ключи
+//   alert(Object.keys(rabbit)); // jumps
+  
+//   // for..in проходит и по своим, и по унаследованным ключам
+//   for(let prop in rabbit) alert(prop); // jumps, затем eats
+
+
+
+
+
+
+
+// let animal = {
+//     eats: true
+//   };
+  
+//   let rabbit = {
+//     jumps: true,
+//     __proto__: animal
+//   };
+  
+//   for(let prop in rabbit) {
+//     let isOwn = rabbit.hasOwnProperty(prop);
+  
+//     if (isOwn) {
+//       alert(`Our: ${prop}`); // Our: jumps
+//     } else {
+//       alert(`Inherited: ${prop}`); // Inherited: eats
+//     }
+//   }
+
+
+
+
+
+
+
+
+// let hamster = {
+//     stomach: [],
+  
+//     eat(food) {
+//       this.stomach.push(food);
+//     }
+//   };
+  
+//   let speedy = {
+//     stomach: [],
+//     __proto__: hamster
+//   };
+  
+//   let lazy = {
+//     stomach: [],
+//     __proto__: hamster
+//   };
+  
+//   // Этот хомяк нашёл еду
+//   speedy.eat("apple");
+//   console.log( speedy.stomach ); // apple
+  
+//   // У этого хомяка тоже есть еда. Почему? Исправьте
+//   console.log( lazy.stomach ); // apple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Rabbit(name) {
+//     this.name = name;
+//     console.log(name);
+// }
+
+// let rabbit = new Rabbit('Rabby');
+
+// let rabbit1 = rabbit.constructor('Raccy');
+
+
+
+
+
+
+
+
+// function User(username) {
+//     this._username = username;
+//     this._isAdmin = false;
+// };
+
+// let rasul = new User('Rasulbek');
+
+// for (let key in rasul) {
+//     console.log(key);
+// }
+
+
+
+
+
+
+// function User(name) {
+//     this.name = name;
+// };
+
+// User.prototype.sayHi = function() {return `Hello ${this.name}!`};
+
+// let rasul = new User('Rasulbek');
+
+
+
+
+// ??????////???//???/??/??/??/??/??/??//////?/??//????///????/?????????///???/?/??????///?//?/??//?????////?/??/?/??//?//?///////??/?
+// let user = {
+//     name: 'Rasulbek'
+// };
+
+// let user1 = {
+//     name: 'Emma'
+// };
+
+// user.__proto__.sayName = function() {return this.name};
+
+// console.log(user);
+// console.log(user1);
+
+
+
+
+// let user = {
+//     _lastName: 'Irgashev'
+// };
+
+// function User(name) {
+//     this._name = name;
+// } User.prototype = user;
+
+// let rasul = new User('Rasulbek');
+
+
+
+
+
+
+// let obj = {
+//     0: 'hello',
+//     1: 'world',
+//     length: 2
+// };
+
+// obj.joinn = Array.prototype.join;
+// console.log(obj.joinn(' '));
+
+
+
+
+
+
+// function sum(a, b) {
+//     console.log(a + b);
+// };
+
+// Function.prototype.defer = function(ms) {
+//     setTimeout(this, ms);
+// };
+
+// sum.defer(2000)(1,2);
+
+
+
+
+
+
+// let obj = Object.create(null);
+// let key = prompt('Key:', '__proto__');
+// obj[key] = 'some value';
+
+// console.log(obj[key]);
+
+
+
+
+
+
+// let user = {
+//     name: 'Rasulbek'
+// };
+
+// let rasul = Object.create(user);
+// let getName = prompt('PLease write ypur name', '');
+
+// (getName == '' || getName == null || getName == undefined) ? Object.setPrototypeOf(rasul, {name: null})
+//                                                            : Object.setPrototypeOf(rasul, {name: getName});
+
+// let descriptor = Object.getOwnPropertyDescriptor(rasul.__proto__, 'name');
+
+// console.log(JSON.stringify(descriptor, null, 4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class User {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age  = age;
+//     }
+
+//     sayHi() {
+//         console.log('name: ' + this.name + ' age: ' + this.age)
+//     }
+// }
+
+// let rasul = new User('Rasulbek', 16);
+
+// console.log(JSON.stringify(rasul, null, 4))
+
+
+
+
+
+
+
+
+// function makeClass(phrase) {
+//     return class {
+//         sayHi() {
+//             return phrase;
+//         }
+//     }
+// }
+
+// let User = makeClass('r1');
+
+// console.log(new User().sayHi());
+
+
+
+
+
+
+
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     get name() {
+//         return this._name;
+//     }
+
+//     set name(value) {
+//         if (value.length < 4) {
+//             return console.log('Имя слишком короткое');
+//         }
+
+//         this._name = value;
+//     }
+// }
+
+// let rasul = new User('r1');
+
+
+
+
+
+
+
+
+class Clock {
+    
+}

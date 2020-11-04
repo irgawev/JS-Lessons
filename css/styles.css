@@ -18,12 +18,13 @@ h1
 {
 	position: relative;
 	text-align: center;
-	font: 80px 'Concert One';
+	font: 90px 'Concert One';
 	font-weight: bold;
 	top: 25vh;
-	color: #00011554;
+	color: #000c767a;
+	filter: hue-rotate(1085deg);
 	-webkit-background-clip: text;
-	background-image: url(https://www.msta.org/wp-content/uploads/2017/10/watercolor-background-1.jpg);
+	background-image: url(https://i.gifer.com/NvN.gif);
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
