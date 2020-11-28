@@ -2186,8 +2186,6 @@
 
 
 
-
-
 // function User(username) {
 //     this._username = username;
 //     this._isAdmin = false;
@@ -2246,7 +2244,6 @@
 
 
 
-
 // let obj = {
 //     0: 'hello',
 //     1: 'world',
@@ -2270,7 +2267,6 @@
 // };
 
 // sum.defer(2000)(1,2);
-
 
 
 
@@ -2400,7 +2396,6 @@
 
 
 
-
 // class User {
 //     constructor(name) {
 //         this.name = name;
@@ -2427,7 +2422,400 @@
 
 
 
+// class Animal {
+//     constructor(name) {
+//         this.speed = null;
+//         this.name  = name;
+//     }
 
-class Clock {
-    
-}
+//     run(speed) {
+//         this.speed = speed;
+//         return `Speed of ${this.name}: ${this.speed}`;
+//     }
+
+//     stop() {
+//         this.speed = null;
+//         return console.log(`${this.name} has been stopped`);
+//     }
+// }
+
+// class Cat extends Animal {
+//     constructor(name, earLength) {
+//         super(name);
+//         this.earLength = earLength;
+//     }
+
+//     hide() {
+//         console.log(`${this.name} hidding`);
+//     }
+
+//     stop() {
+//         setTimeout(() => super.stop(), 2000);
+//         this.hide();
+//     }
+// }
+
+// let rabbit = new Animal('Hungry Rabbit');
+// let catty  = new Cat('Catty', 10);
+
+
+
+
+
+
+// function f(phrase) {
+//     return class {
+//         sayHi() {
+//             console.log(phrase);
+//         }
+//     }
+// }
+
+// class User extends f('Hello!') {};
+
+// let rasul = new User();
+
+
+
+
+
+
+// class User {
+//     static staticMethod() {
+//         return (this === User);
+//     }
+// }
+
+
+
+
+
+
+
+// class Rabbit extends Object {
+//     constructor(name) {
+//         super();
+//         this.name = name;
+//     }
+//   }
+  
+//   let rabbit = new Rabbit("Кроль");
+  
+//   alert( rabbit.hasOwnProperty('name') );
+
+
+
+
+
+
+
+// class User {
+//     constructor(name) {
+//         this._name = name;
+//     }
+//     static sayHi() {
+//         console.log(this.name)
+//     }
+// }
+
+// class NewUser extends User {
+// }
+
+// let rasul = User.sayHi();
+
+
+
+
+
+
+// class CoffeeMachine {
+//     _waterAmount = null;
+
+//     // set & get of _waterAmount
+
+//     set waterAmount(value) {
+//         if (value <= 0) throw new Error('Нужно налить больше воды!');
+//         this._waterAmount = value;
+//     }
+
+//     get waterAmount() {
+//         return this._waterAmount;
+//     }
+
+//     // set & get of _power
+
+//     set power(value) {
+//         return console.log(`Мощность уже установлена на ${this._power}W!`)
+//     }
+
+//     get power() {
+//         return this._power;
+//     }
+
+//     constructor(power) {
+//         this._power = power;
+//     }
+// }
+
+// let coffeeMachine = new CoffeeMachine(100);
+// coffeeMachine.waterAmount = 1;
+
+
+
+
+
+
+
+// class PowerArr extends Array {
+//     isEmpty() {
+//         return this.length === 0;
+//     }
+
+//     static get [Symbol.species]() {
+//         return Array;
+//     }
+// }
+
+// let arr = new PowerArr(1, 2, 3, 10, 55);
+// let filteredArr = arr.filter(item => item >= 10);
+
+// console.log(arr);
+
+
+
+
+
+
+// class Animal {
+//     static [Symbol.hasInstance](Obj) {
+//         if (Obj.canEat) return true;
+//     }
+// }
+
+// let rabbit = {canEat: true};
+// let obj = {canEat: true};
+// console.log(obj instanceof Animal);
+// console.log(rabbit instanceof Animal);
+
+
+
+
+
+
+
+
+// let objToString = Object.prototype.toString;
+// let arr = [];
+
+// console.log(objToString.call(arr));
+
+
+
+
+
+
+
+// let user = {
+//     [Symbol.toStringTag]: "User"
+// };
+
+// console.log( {}.toString.call(user) );
+
+
+
+
+
+
+
+
+// let sayMixin = {
+//     say(phrase) {
+//       console.log(phrase);
+//     }
+//   };
+  
+//   let sayHiMixin = {
+//     __proto__: sayMixin, // (или мы можем использовать Object.create для задания прототипа)
+  
+//     sayHi() {
+//       // вызываем метод родителя
+//       super.say(`Привет, ${this.name}`); // (*)
+//     },
+//     sayBye() {
+//       super.say(`Пока, ${this.name}`); // (*)
+//     }
+//   };
+  
+//   class User {
+//     constructor(name) {
+//       this.name = name;
+//     }
+//   }
+  
+//   // копируем методы
+//   Object.assign(User.prototype, sayHiMixin);
+  
+//   // теперь User может сказать Привет
+//   new User("Вася").sayHi(); // Привет, Вася!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try {
+//     console.log('Helloo!');
+//     WTF
+//     console.log("Byee!");
+// } catch(err) {
+//     console.log(err.stack)
+
+//     if(err.name == "ReferenceError") {
+//         console.log("r8")
+//     }
+// }
+
+
+
+
+
+
+// let json = '{ "age": 30 }'; // данные неполны
+// try {
+
+//   let user = JSON.parse(json);
+
+//   if (!user.name) {
+//     throw new SyntaxError("Данные неполны: нет имени");
+//   }
+
+//   blabla(); // неожиданная ошибка
+
+//   console.log( user.name );
+
+// } catch(err) {
+
+//   if (err.name == "SyntaxError") {
+//     console.log( "JSON Error: " + err.message );
+//   } else {
+//     throw err; // проброс (*)
+//   }
+
+// }
+
+
+
+
+
+
+
+
+// class Error {
+//     constructor(message) {
+//         this.name    = 'ERROR';
+//         this.message = message;
+//         this.stack   = '<стек вызовов>';
+//     }
+// }
+
+// class ValidationError extends Error {
+//     constructor(message) {
+//         super(message);
+//         this.name = "ValidationError";
+//     }
+// }
+
+// function readUser(json) {
+//     let user = JSON.parse(json);
+
+//     if(!user.name) {
+//         throw new ValidationError('Havn\'t name');
+//     }
+//     if(!user.age) {
+//         throw new ValidationError('Havn\'t age');
+//     }
+
+//     return user;
+// }
+
+// try {
+//     let user = readUser('{ "age": 25 }');
+//   } catch (err) {
+//     if (err instanceof ValidationError) {
+//         console.log(err.stack);
+//     } else if (err instanceof SyntaxError) { // (*)
+//         console.log(err.stack);
+//     } else {
+//         throw err; 
+//     }
+// }
